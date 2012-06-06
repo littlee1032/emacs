@@ -26,6 +26,11 @@
 (setq debug-on-error t)
 
 ;; key-binding
+(global-set-key (kbd "C-x C-b") 'buffer-menu-other-window)
+(global-set-key (kbd "S-<left>") 'windmove-left) 
+(global-set-key (kbd "S-<right>") 'windmove-right) 
+(global-set-key (kbd "S-<up>") 'windmove-up) 
+(global-set-key (kbd "S-<down>") 'windmove-down)
 
 ;; auto-install
 (add-to-list 'load-path (expand-file-name "~/.emacs.d"))
@@ -36,3 +41,4 @@
 ;; icicles
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/auto-install"))
 (require 'icicles)
+(icy-mode 1)
