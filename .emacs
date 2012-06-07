@@ -30,9 +30,9 @@
 
 ;; key-binding
 (global-set-key (kbd "C-x C-b") 'buffer-menu-other-window)
-(global-set-key (kbd "C-<left>") 'windmove-left) 
-(global-set-key (kbd "C-<right>") 'windmove-right) 
-(global-set-key (kbd "C-<up>") 'windmove-up) 
+(global-set-key (kbd "C-<left>") 'windmove-left)
+(global-set-key (kbd "C-<right>") 'windmove-right)
+(global-set-key (kbd "C-<up>") 'windmove-up)
 (global-set-key (kbd "C-<down>") 'windmove-down)
 (global-set-key (kbd "C-x C-g") 'goto-line)
 (global-set-key [f1] 'other-window)
@@ -60,3 +60,23 @@
 (add-hook 'sgml-mode-hook my-hook-for-whitespace)
 (add-hook 'shell-script-mode-hook my-hook-for-whitespace)
 (add-hook 'diff-mode-hook my-hook-for-whitespace)
+
+;; color-theme
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/color-theme"))
+(require 'color-theme)
+(color-theme-initialize)
+;; test for each frame or console
+(defun color-theme-for-win-sys (frame)
+  (let ((color-theme-is-global nil))
+    (select-frame frame)
+    (when (window-system frame)
+      (color-theme-classic))))
+
+;; hook on after-make-frame-functions
+(add-hook 'after-make-frame-functions 'color-theme-for-win-sys)
+
+;; Start up the color theme in this initial frame.
+(let ((color-theme-is-global nil))
+  (when (window-system)
+    (color-theme-classic)))
+
