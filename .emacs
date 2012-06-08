@@ -17,7 +17,7 @@
 (setq inhibit-startup-message t)
 (setq tab-width 4)
 (setq-default c-basic-offset 4)
-;; (setq-default indent-tabs-mode nil) ;; tabs are evil
+(setq-default indent-tabs-mode nil) ;; tabs are evil
 
 (setq user-full-name "LittleE")
 (setq user-email-address "LittleE1032@gmail.com")
