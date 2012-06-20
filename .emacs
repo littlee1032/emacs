@@ -19,6 +19,10 @@
 (setq-default c-basic-offset 4)
 (setq-default indent-tabs-mode nil) ;; tabs are evil
 
+;; (set-default-font "Monaco")
+(set-fontset-font (frame-parameter nil 'font)
+                  'han '("WenQuanYi Micro Hei" . "unicode-bmp"))
+
 (setq user-full-name "LittleE")
 (setq user-email-address "LittleE1032@gmail.com")
 
