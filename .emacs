@@ -20,8 +20,8 @@
 (setq-default indent-tabs-mode nil) ;; tabs are evil
 
 ;; (set-default-font "Monaco")
-(set-fontset-font (frame-parameter nil 'font)
-                  'han '("WenQuanYi Micro Hei" . "unicode-bmp"))
+;; (set-fontset-font (frame-parameter nil 'font)
+;;                  'han '("WenQuanYi Micro Hei" . "unicode-bmp"))
 
 (setq user-full-name "LittleE")
 (setq user-email-address "LittleE1032@gmail.com")
@@ -33,7 +33,7 @@
 (setq debug-on-error t)
 
 ;; key-binding
-(global-set-key (kbd "C-x C-b") 'buffer-menu-other-window)
+(global-set-key (kbd "C-x C-b") 'bs-show)
 (global-set-key (kbd "C-<left>") 'windmove-left)
 (global-set-key (kbd "C-<right>") 'windmove-right)
 (global-set-key (kbd "C-<up>") 'windmove-up)
