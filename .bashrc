@@ -28,6 +28,10 @@ alias ec='emacsclient -c'
 alias which='type -a'
 alias path='echo -e ${PATH//:/\\n}'
 alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
+alias gb='git branch'
+alias gco='git checkout'
+alias gdiff='git diff'
+alias gst='git status'
 
 #-------------------------------------------------------------
 # File & string-related functions:
@@ -95,3 +99,5 @@ export LANG=en_US.UTF-8
 # grep
 export GREP_COLOR='1;35;40'
 
+# EDITOR
+export EDITOR=emacs
