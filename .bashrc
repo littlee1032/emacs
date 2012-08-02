@@ -32,6 +32,7 @@ alias gb='git branch'
 alias gco='git checkout'
 alias gdiff='git diff'
 alias gst='git status'
+alias ..='cd ..'
 
 #-------------------------------------------------------------
 # File & string-related functions:
@@ -46,7 +47,7 @@ function fe()
 { find . -type f -iname '*'${1:-}'*' -exec ${2:-file} {} \;  ; }
 
 # Find a pattern in a set of files and highlight them:
-# (needs a recent version of egrep)
+# (needs a recennnt version of egrep)
 function fstr()
 {
     OPTIND=1
@@ -90,6 +91,21 @@ function repeat()       # Repeat n times command.
         eval "$@";
     done
 }
+
+#-------------------------------------------------------------
+# Jar finder
+#-------------------------------------------------------------
+function searchClass()
+{
+    local fileList
+    fileList=`find $1 -type f -iname *.jar`
+    for afile in $fileList
+    do
+      echo Finding $afile
+      jar tf $afile | grep $2
+    done
+}
+
 
 export PATH=/Users/lee/local/bin:$PATH
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.7.0u.jdk/Contents/Home
