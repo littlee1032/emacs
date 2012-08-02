@@ -32,7 +32,6 @@ alias gb='git branch'
 alias gco='git checkout'
 alias gdiff='git diff'
 alias gst='git status'
-alias ..='cd ..'
 
 #-------------------------------------------------------------
 # File & string-related functions:
