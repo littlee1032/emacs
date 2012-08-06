@@ -105,14 +105,6 @@ function searchClass()
     done
 }
 
-
-export PATH=/Users/lee/local/bin:$PATH
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.7.0u.jdk/Contents/Home
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home
-export LANG=en_US.UTF-8
-
-# grep
-export GREP_COLOR='1;35;40'
-
-# EDITOR
-export EDITOR=emacs
+if [ -f ~/.bashrc.local ]; then
+    . ~/.bashrc.local
+fi
