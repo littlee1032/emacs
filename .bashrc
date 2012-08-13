@@ -16,7 +16,7 @@ echo \$T \`"
 #+ and it will not change afterwards even if the user ID changes.
 
 
-PS1="\n\[$GREEN\][\w] \n\[$DARKGRAY\](\[$PCT\]\u\[$DARKGRAY\])\[$YELLOW\]-> $NC"
+PS1="\n\[$GREEN\][\w] \n\[$DARKGRAY\](\[$PCT\]\u\[$DARKGRAY\])\[$YELLOW\]-> \[$NC\]"
 
 #alias
 alias ll='ls -l -G'
